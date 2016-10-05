@@ -41,10 +41,15 @@ alphabet=string.ascii_lowercase
 #sentence=input("Please enter a string of text (the bigger the better): ")
 sentence="The rain in Spain stays mainly in the plain."
 lowercaseSentence=sentence.lower()
+orginizationList=[]
 for x in alphabet:
     numberofLetters=lowercaseSentence.count(x)
     if numberofLetters>0:
-        print(x*numberofLetters)
+        x=numberofLetters
+        orginizationList.append(x)
+        orginizationList.sort()
+for i in alphabet:
+    print(x*i)
 
 
 
