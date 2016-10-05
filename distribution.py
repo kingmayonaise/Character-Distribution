@@ -36,3 +36,40 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
+import string
+alphabet=string.ascii_lowercase
+#sentence=input("Please enter a string of text (the bigger the better): ")
+sentence="The rain in Spain stays mainly in the plain."
+lowercaseSentence=sentence.lower()
+for x in alphabet:
+    numberofLetters=lowercaseSentence.count(x)
+    if numberofLetters>0:
+        print(x*numberofLetters)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
