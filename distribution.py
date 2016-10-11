@@ -41,19 +41,12 @@ alphabet=string.ascii_lowercase
 #sentence=input("Please enter a string of text (the bigger the better): ")
 sentence="The rain in Spain stays mainly in the plain."
 lowercaseSentence=sentence.lower()
-numberList=[]
-letterList=[]
+highestnum=0
+sortstuff=[]
 for x in alphabet:
     numberofLetters=lowercaseSentence.count(x)
-    if numberofLetters>0:
-        numberList.append(numberofLetters)
-        letterList.append(x)
-numLetterList=zip(numberList,letterList)
-numLetterList=list(numLetterList)
-numLetterList.sort()
-for i in numLetterList:
-    for k in i:
-            
+    if numberofLetters>highestnum:
+        print(x*numberofLetters)
 
 
 
