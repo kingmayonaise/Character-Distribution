@@ -36,18 +36,26 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
+from collections import defaultdict
+from operator import itemgetter
 import string
+letterNumdict=defaultdict(list)
 alphabet=string.ascii_lowercase
 #sentence=input("Please enter a string of text (the bigger the better): ")
 sentence="The rain in Spain stays mainly in the plain."
 lowercaseSentence=sentence.lower()
-highestnum=0
-sortstuff=[]
-for x in alphabet:
-    numberofLetters=lowercaseSentence.count(x)
-    if numberofLetters>highestnum:
-        print(x*numberofLetters)
-
+for l in alphabet:
+    numberofLetters=lowercaseSentence.count(l)
+    if numberofLetters>0:
+        letterNumdict[numberofLetters].append(l)
+        #letterNumdict[numberofLetters]=x
+        #print(x*numberofLetters)
+for i in sorted(letterNumdict.items(),key=lambda x: x[0],reverse=True):
+#    print(i)
+#    k=i[1]
+#    print(k)
+    for z in i[1]:
+        print(i[0]*z)
 
 
 
