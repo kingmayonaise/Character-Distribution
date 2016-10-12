@@ -42,6 +42,7 @@ import string
 letterNumdict=defaultdict(list)
 alphabet=string.ascii_lowercase
 sentence=input("Please enter a string of text (the bigger the better): ")
+print ('The distribution of characters in "'+sentence+'." is:'
 #sentence="The rain in Spain stays mainly in the plain."
 lowercaseSentence=sentence.lower()
 for l in alphabet:
